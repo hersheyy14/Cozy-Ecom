@@ -1,0 +1,19 @@
+.category-container {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.category-button {
+  background-color: rgb(240, 223, 223);
+  color: rgb(42, 38, 38);
+  height: 35px;
+  width: auto;
+  margin: 50px 10px 0px 10px;
+  font-weight: 600;
+}
+.category-button:hover {
+  background-color: rgb(72, 67, 67);
+  color: rgb(237, 234, 234);
+  transition: background-color 1s ease-out;
+}

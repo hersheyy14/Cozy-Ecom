@@ -1,0 +1,13 @@
+.product-container {
+  /* background-image: url("https://fashionisers.com/wp-content/uploads/2020/01/tips-for-creating-your-signature-looks-main-image.jpg"); */
+  /* background-color: beige; */
+  background-image: url("https://i.pinimg.com/736x/e1/4d/bd/e14dbd33cd5c46bf953b1170c8f94a94.jpg");
+  height: 100%;
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  z-index: 0;
+}

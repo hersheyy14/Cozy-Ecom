@@ -1,0 +1,25 @@
+.home-container {
+  background-image: url("https://thumbs.dreamstime.com/b/stylish-girl-walking-coffee-shopping-bags-doing-shopping-stylish-girl-walking-coffee-shopping-bags-doing-173354471.jpg");
+  /* background-image: url("https://cdn.cliqueinc.com/posts/283687/french-vs-american-winter-fashion-trends-283687-1573493747653-main.700x0c.jpg"); */
+  height: 100vh;
+  background-size: 100% 100vh;
+}
+
+.home-body {
+  font-family: "Urbanist", sans-serif;
+  text-transform: uppercase;
+  padding: 330px 0px 0px 10px;
+}
+
+.home-title {
+  font-size: 70px;
+  font-weight: bolder;
+  color: rgb(39, 36, 36);
+  /* color: beige; */
+}
+.home-text {
+  color: rgb(60, 56, 56);
+  font-size: 35px;
+  font-weight: 600;
+  margin: 55px 35px;
+}

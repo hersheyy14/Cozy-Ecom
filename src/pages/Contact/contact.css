@@ -1,0 +1,40 @@
+.contact-container {
+  background-image: url("https://assets.vogue.com/photos/601078da7067cb0995b159ba/master/w_3778,h_3525,c_limit/Photo%20Jun%2024,%201%2024%2001%20PM.jpg");
+  height: 100vh;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-around;
+  /* font-size: 25px; */
+  font-weight: bold;
+  align-content: center;
+  align-items: center;
+}
+
+.contact-left,
+.contact-center,
+.contact-right {
+  background-color: beige;
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 6px 8px 15px 1px rgba(36, 35, 35, 0.78);
+  text-align: center;
+}
+
+.contact-icon {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 50%;
+  background-color: black;
+  color: azure;
+  font-size: 26px;
+}
+.contact-title {
+  font-size: 40px;
+}
+.contact-info {
+  font-size: 20px;
+  margin-top: 20px;
+}
