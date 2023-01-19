@@ -5,6 +5,10 @@ const Register = (props) => {
   const [name, setName] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(name, props.email);
+    props.setEmail("");
+    props.setPassword("");
+    setName("");
   };
   return (
     <div className="register-container">

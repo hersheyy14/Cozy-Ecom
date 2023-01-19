@@ -15,7 +15,9 @@
   font-size: 70px;
   font-weight: bolder;
   color: rgb(39, 36, 36);
-  /* color: beige; */
+  /* color: beige;
+  background-color: black;
+  width: auto; */
 }
 .home-text {
   color: rgb(60, 56, 56);

@@ -3,6 +3,9 @@ import "./login.css";
 const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(props.email);
+    props.setEmail("");
+    props.SetPassword("");
   };
   return (
     <div className="login-container">
