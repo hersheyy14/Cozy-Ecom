@@ -1,3 +1,6 @@
+An E-commerce platform that is built to showcase products by fetching through API, can filter the products category-wise and add the products to the cart page which calculates the total amount to be paid
+Link: https://cozy-ecom.netlify.app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
