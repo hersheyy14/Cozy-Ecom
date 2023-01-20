@@ -5,8 +5,6 @@ import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import Singleproduct from "./components/Singleproductdetails/Singleproduct";
-// import SingleProductDetails from "./components/SingleProduct/SingleProductDetails";
 import Cart from "./pages/Cart/Cart";
 import About from "./pages/AboutUs/About";
 import Contact from "./pages/Contact/Contact";
@@ -77,15 +75,6 @@ function App() {
               />
             }
           />
-          {/* <Route
-            path="/products/:id"
-            element={
-              <SingleProductDetails
-                products={products}
-                fetchData={fetchData(URL)}
-              />
-            }
-          /> */}
           <Route
             path="/cart"
             element={<Cart cart={cart} setCart={setCart} />}
