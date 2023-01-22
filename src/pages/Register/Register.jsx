@@ -1,22 +1,49 @@
 import "./register.css";
+import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const URL = "https://fakestoreapi.com/users";
+
+const postRegisterData = async (url, data) => {
+  try {
+    let result = await axios.post(url, data);
+    console.log(result.data);
+    return result.data;
+  } catch (error) {
+    console.log(error, "error");
+    return;
+  }
+};
 
 const Register = (props) => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, props.email);
-    props.setEmail("");
-    props.setPassword("");
-    setName("");
+    let postData = {
+      email: email,
+      username: name,
+      password: password,
+    };
+    let res = await postRegisterData(URL, postData);
+    console.log(res);
+    if (res.error) {
+      alert(res.message);
+      return;
+    }
+    alert("successfully Registered");
+    navigate("/");
   };
   return (
     <div className="register-container">
       <h1 className="register-title">Create an Account</h1>
       <form onSubmit={handleSubmit} className="form-container">
-        <lable className="register-lable" htmlFor="name">
+        <label className="register-lable" htmlFor="name">
           Enter Your Name
-        </lable>
+        </label>
         <input
           className="register-input"
           type="text"
@@ -27,31 +54,31 @@ const Register = (props) => {
           onChange={(e) => setName(e.target.value)}
           required
         />
-        <lable className="register-lable" htmlFor="email">
+        <label className="register-lable" htmlFor="email">
           Enter Your Email
-        </lable>
+        </label>
         <input
           className="register-input"
           type="email"
           id="email"
           name="email"
           placeholder="cozy@gmail.com"
-          value={props.email}
-          onChange={(e) => props.setEmail(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <lable className="register-lable" htmlFor="password">
+        <label className="register-lable" htmlFor="password">
           Enter Your Password
-        </lable>
+        </label>
         <input
           className="register-input"
           type="password"
           id="password"
           name="password"
           placeholder="********"
-          value={props.password}
+          value={password}
           pattern=".{8,}"
-          onChange={(e) => props.setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           required
         />
         <button className="register-button" type="submit">

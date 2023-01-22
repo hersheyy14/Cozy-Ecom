@@ -26,8 +26,6 @@ function App() {
   const [category, setCategory] = useState([]);
   const [loading, setLoading] = useState(false);
   const [cart, setCart] = useState([]);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   useEffect(() => {
     const productDataFunc = async () => {
@@ -81,28 +79,8 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route
-            path="/login"
-            element={
-              <Login
-                email={email}
-                password={password}
-                setEmail={setEmail}
-                setPassword={setPassword}
-              />
-            }
-          />
-          <Route
-            path="/register"
-            element={
-              <Register
-                email={email}
-                password={password}
-                setEmail={setEmail}
-                setPassword={setPassword}
-              />
-            }
-          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
     </div>
